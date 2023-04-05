@@ -4,5 +4,6 @@ A collection of useful SCSS snippets.
 
 ## List
 
-| Name | Description |
-| :--- | :---------- |
+| Name             | Description                                          |
+| :--------------- | :--------------------------------------------------- |
+| [Fluid](./fluid) | Dynamic linear value scaling based on viewport width |
