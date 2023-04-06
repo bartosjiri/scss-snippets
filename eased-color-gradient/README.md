@@ -54,7 +54,9 @@ Adaptation of [Easing Linear Gradients by Andreas Larsen](https://css-tricks.com
 }
 ```
 
-| Variable        | Value type                                                                                                | Description                                                                         |
+#### Parameters
+
+| Parameter       | Value type                                                                                                | Description                                                                         |
 | :-------------- | :-------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------------- |
 | `direction`     | [side, corner or angle](https://developer.mozilla.org/en-US/docs/Web/CSS/gradient/linear-gradient#values) | Direction of the gradient line                                                      |
 | `color`         | [color](https://developer.mozilla.org/en-US/docs/Web/CSS/color_value)                                     | Color for which the gradient is generated; uses solid variant of the provided color |
