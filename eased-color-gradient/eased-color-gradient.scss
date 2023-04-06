@@ -1,0 +1,24 @@
+@function eased-color-gradient(
+  $direction,
+  $color,
+  $start-opacity,
+  $end-opacity
+) {
+  $eased-opacities: 0, 0.0086, 0.0355, 0.0817, 0.1472, 0.2318, 0.3319, 0.4427,
+    0.5573, 0.6681, 0.7682, 0.8526, 0.9183, 0.9645, 0.9914, 1;
+
+  $gradient: "";
+
+  @for $i from 1 through length($eased-opacities) {
+    $stop: calc((1 / (length($eased-opacities) - 1)) * ($i - 1));
+    $stop-rounded: calc(round($stop * 1000) / 1000);
+    $opacity: ($end-opacity - $start-opacity) *
+      nth($eased-opacities, $i) +
+      $start-opacity;
+    $color: rgba($color, $opacity);
+
+    $gradient: $gradient + ", " + $color + " " + $stop-rounded * 100%;
+  }
+
+  @return unquote("linear-gradient(" + $direction + $gradient + ")");
+}
